@@ -1,0 +1,31 @@
+{
+	"CurrentEnvironment": "DEVELOPMENT",
+	"Environments": [
+		{
+			"Name" : "DEVELOPMENT",
+			"HTTPServer": {
+				"Address":"",
+				"Port":3333,
+				"RequestTimeout":30
+			}
+		},
+
+		{
+			"Name" : "STAGING",
+			"HTTPServer": {
+				"Address":"",
+				"Port":3333,
+				"RequestTimeout":30
+			}
+		},
+
+		{
+			"Name" : "PRODUCTION",
+			"HTTPServer": {
+				"Address":"",
+				"Port":3333,
+				"RequestTimeout":30
+			}
+		}
+	]
+}
