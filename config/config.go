@@ -2,7 +2,6 @@ package config
 
 import (
 	"errors"
-	"strconv"
 	"strings"
 )
 
@@ -25,14 +24,12 @@ type EnvironmentConfig struct {
 
 // HTTPServerConfig represents the HTTP Server address configuration
 type HTTPServerConfig struct {
-	Address        string
-	Port           int
-	RequestTimeout int
+	Address string
 }
 
 // GetFormatedAddress returns a formated HTTP Address
 func (h HTTPServerConfig) GetFormatedAddress() string {
-	return strings.Join([]string{h.Address, strconv.Itoa(h.Port)}, ":")
+	return strings.Join([]string{h.Address, "3333"}, ":")
 }
 
 // GetCurrentEnvironmentConfig returns the current environment configuration

@@ -1,14 +1,18 @@
 package infrastructure
 
 import (
+	"os"
 	"reflect"
+	"strings"
 	"testing"
 
 	"github.com/cleitonmarx/webcrawler/config"
 )
 
 func TestGetSystemConfiguration_WithValidFilePath_NotEmptyConfig(t *testing.T) {
-	configRepository := NewConfigFileRepository("../webcrawler.json")
+	configRepository := NewConfigFileRepository(
+		strings.Join([]string{os.Getenv("GOPATH"), "/src/github.com/cleitonmarx/webcrawler/webcrawler.json"}, ""),
+	)
 	configuration, err := configRepository.GetSystemConfiguration()
 	if err != nil {
 		t.Error(err)
