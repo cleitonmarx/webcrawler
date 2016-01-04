@@ -12,13 +12,13 @@
 			"HTTPServer": {
 				"Address":""
 			}
-		}
+		},
 		{
 			"Name" : "INTEGRATION",
 			"HTTPServer": {
 				"Address":""
 			}
-		}
+		},
 		{
 			"Name" : "PRODUCTION",
 			"HTTPServer": {
