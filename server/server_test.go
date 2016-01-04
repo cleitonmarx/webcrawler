@@ -16,7 +16,7 @@ import (
 
 func TestMainAdress_Return200OK(t *testing.T) {
 	input := InputParam{t, "GET", "", nil, 0}
-	expected := ExpectedParam{http.StatusOK, `{"status":200, "message": "You reached the webcrawler server"}`}
+	expected := ExpectedParam{http.StatusOK, `{"status":200, "message": "You reached the webcrawler server. V:0.1.0"}`}
 	execServerRequestTest(input, expected)
 }
 
