@@ -79,6 +79,12 @@ func TestCrawlerRequest_WithInvalidDepth_Return400BadRequest(t *testing.T) {
 	execServerRequestTest(input, expected)
 }
 
+func TestCrawlerRequest_WithInvalidTimeout_Return400BadRequest(t *testing.T) {
+	input := InputParam{t, "POST", "crawler", &url.Values{"url": {"http://localhost/1"}, "timeout": {"1ml"}}, 0}
+	expected := ExpectedParam{http.StatusBadRequest, `{"status":400, "message": "The parameter timeout isn't a valid time. Examples: 5m, 10s"}`}
+	execServerRequestTest(input, expected)
+}
+
 type InputParam struct {
 	t            *testing.T
 	method       string
