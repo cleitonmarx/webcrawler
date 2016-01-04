@@ -26,7 +26,7 @@ RUN \
 	cd /go/src/github.com/cleitonmarx/webcrawler && \
 	go get github.com/tools/godep && \
 	godep restore && \
-	go install
+	godep go install
 
 # Define default command
 CMD ["/go/bin/webcrawler"]
