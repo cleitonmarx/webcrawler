@@ -22,8 +22,8 @@ ADD . /go/src/github.com/cleitonmarx/webcrawler
 WORKDIR /go/src/github.com/cleitonmarx/webcrawler
 
 # Restore Dependencies and Install Application
+RUN cd /go/src/github.com/cleitonmarx/webcrawler
 RUN \
-	cd /go/src/github.com/cleitonmarx/webcrawler && \
 	go get github.com/tools/godep && \
 	godep restore && \
 	godep go install
