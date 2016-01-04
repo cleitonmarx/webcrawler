@@ -21,7 +21,7 @@ type MainController struct {
 }
 
 func (mc *MainController) GetHandler(responseWriter http.ResponseWriter, request *http.Request, parameters map[string]string) {
-	sendResponseMessage(responseWriter, 200, "You reached the webcrawler server")
+	sendResponseMessage(responseWriter, 200, "You reached the webcrawler server. V:0.1.0")
 }
 
 func (mc *MainController) CrawlerHandler(responseWriter http.ResponseWriter, request *http.Request, parameters map[string]string) {
