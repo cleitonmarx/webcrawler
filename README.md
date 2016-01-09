@@ -7,7 +7,7 @@ Microservice that crawl webpages and generate a sitemap with links and pages ass
 `cd $GOPATH/src/github.com/cleitonmarx/webcrawler`  
 make sure godep is installed, `go get github.com/tools/godep` and then build with  
 `godep restore`  
-`godep go build -a ./cmd/...`  
+`godep go build -a`  
 
 ###Build Docker image  
 `go get github.com/cleitonmarx/webcrawler`  
