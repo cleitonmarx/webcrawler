@@ -50,7 +50,7 @@ func (mc *MainController) CrawlerHandler(responseWriter http.ResponseWriter, req
 
 	crawler := services.NewCrawler(mc.fetcher, crawlerDepth, mc.logger)
 	sitemap := crawler.GenerateSitemap(newUrl, timeout)
-	mc.logger.Printf("Finished | Total url fetched: %d | URL: %s\n", len(sitemap.List), urlParam)
+	mc.logger.Printf("Finished | Total url fetched: %d | URL: %s\n", sitemap.List.Len(), urlParam)
 	xmlOutput, _ := xml.Marshal(sitemap)
 	responseWriter.Header().Add("Content-Type", "text/xml")
 	responseWriter.Write([]byte(xml.Header))
